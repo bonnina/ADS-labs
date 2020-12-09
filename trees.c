@@ -203,5 +203,30 @@ void readinput(const char *filename)
 }
 
 int main()
-{}
+{
+     readinput("input.txt");
+   
+    printf("Tree:\n");
+    print(root);
+    printf("\n");
+   
+    printf("Preorder:\n");
+    traverse(root, PREORDER, 0, 0);
+    printf("\n");
+   
+    printf("Inorder:\n");
+    traverse(root, INORDER, 0, 0);
+    printf("\n");
+   
+    printf("Postorder:\n");
+    traverse(root, POSTORDER, 0, 0);
+    printf("\n");
+   
+    printf("Levelorder:\n");
+    traverse(root, LEVELORDER, 0, 0);
+    printf("\n");
+
+    destroy(root);
+    return 0;
+}
 
