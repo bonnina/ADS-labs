@@ -204,29 +204,26 @@ void readinput(const char *filename)
 
 int main()
 {
-     readinput("input.txt");
+    readinput("input.txt");
    
     printf("Tree:\n");
     print(root);
     printf("\n");
    
     printf("Preorder:\n");
-    traverse(root, PREORDER, 0, 0);
-    printf("\n");
-   
+    traverseprint(PREORDER);
+
     printf("Inorder:\n");
-    traverse(root, INORDER, 0, 0);
-    printf("\n");
-   
+    traverseprint(INORDER);
+
     printf("Postorder:\n");
-    traverse(root, POSTORDER, 0, 0);
-    printf("\n");
-   
+    traverseprint(POSTORDER);
+
     printf("Levelorder:\n");
-    traverse(root, LEVELORDER, 0, 0);
-    printf("\n");
+    traverseprint(LEVELORDER);
+   
+    printf("AVG left subtree:\n%f\n", traverseavg(root->left));
 
     destroy(root);
     return 0;
 }
-
