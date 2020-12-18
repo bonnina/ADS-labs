@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <time.h>
+#include <sys/time.h>
 
 void deleteAndShift(int arr[], int length, int index)
 {
@@ -9,6 +11,9 @@ void deleteAndShift(int arr[], int length, int index)
 }
 
 int main() {
+    //struct timeval start, end;
+    //gettimeofday(&start, NULL);
+
     int arr[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     int size = sizeof(arr) / sizeof(int);
    
@@ -27,6 +32,9 @@ int main() {
     {
         printf("%d ", arr[i]);
     }
-
+    
+    //printf("\n"); 
+    //printf("Time consumed: %lu msec.\n", (end.tv_sec - start.tv_sec ) * 1000000 + end.tv_usec - start.tv_usec);
+    
     return 0;
 }
